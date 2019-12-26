@@ -1,0 +1,7 @@
+/*C2*/SET SCHEMA PUBLIC
+drop table tb_usuario
+create table telefone (\u000a  id_pessoa_fk integer,\u000a  id_telefone identity,\u000a  ds_numero numeric (10,0),\u000a  ds_ddd numeric (3,0),\u000a  ds_tipo varchar (10),\u000a  CONSTRAINT fk_Pessoa FOREIGN KEY (id_pessoa_fk) REFERENCES tb_pessoa (id_pessoa)\u000a )
+drop table telefone
+create table tb_telefone (\u000a  id_pessoa_fk integer,\u000a  id_telefone identity,\u000a  ds_numero numeric (10,0),\u000a  ds_ddd numeric (3,0),\u000a  ds_tipo varchar (10),\u000a  CONSTRAINT fk_Pessoa FOREIGN KEY (id_pessoa_fk) REFERENCES tb_pessoa (id_pessoa)\u000a )
+/*C2*/SET SCHEMA PUBLIC
+DISCONNECT
